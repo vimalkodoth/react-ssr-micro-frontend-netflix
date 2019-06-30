@@ -1,12 +1,12 @@
 var webpack = require('webpack')
 
 module.exports = {
+    target:"web",
     entry: './app/index.js',
     output: {
         path: __dirname + '/public',
         publicPath: 'http://localhost:8087/public/',
         filename: 'bundle.js',
-        libraryTarget: 'amd'
     },
     module: {
         rules: [
@@ -43,7 +43,7 @@ module.exports = {
         ]
     },
     externals: {
-        'react': 'react',
-        'react-dom': 'react-dom'
+        'react': 'React',
+        'react-dom': 'ReactDOM'
     }
 }
